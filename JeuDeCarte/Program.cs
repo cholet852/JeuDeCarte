@@ -14,99 +14,72 @@ namespace JeuDeCarte
 
             for (int i = 0; i < 13; i++)
             {
-                if (i ==0)
+                switch (i)
                 {
-                    Cartes[i] = "As de Coeur";
-                }
-                else if (i == 10)
-                {
-                    Cartes[i] = "Valet de Coeur";
-                }
-                else if (i == 11)
-                {
-                    Cartes[i] = "Dame de Coeur";
-                }
-                else if (i == 12)
-                {
-                    Cartes[i] = "Roi de Coeur";
-                }
-                else
-                {
-                    Cartes[i] = string.Format("{0} de Coeur", i + 1);
+                    case 0: { Cartes[i] = "As de Coeur"; }
+                        break;
+                    case 10: { Cartes[i] = "Valet de Coeur"; }
+                        break;
+                    case 11: { Cartes[i] = "Dame de Coeur"; }
+                        break;
+                    case 12: { Cartes[i] = "Roi de Coeur"; }
+                        break;
+                    default: { Cartes[i] = string.Format("{0} de Coeur", i + 1); }
+                        break;
                 }
             }
 
             for (int i = 13; i < 26; i++)
             {
-                if (i == 13)
+                switch (i)
                 {
-                    Cartes[i] = "As de Carreau";
-                }
-                else if (i == 23)
-                {
-                    Cartes[i] = "Valet de Carreau";
-                }
-                else if (i == 24)
-                {
-                    Cartes[i] = "Dame de Carreau";
-                }
-                else if (i == 25)
-                {
-                    Cartes[i] = "Roi de Carreau";
-                }
-                else
-                {
-                    Cartes[i] = string.Format("{0} de Carreau", i - 12);
+                    case 13: { Cartes[i] = "As de Carreau"; }
+                        break;
+                    case 23: { Cartes[i] = "Valet de Carreau"; }
+                        break;
+                    case 24: { Cartes[i] = "Dame de Carreau"; }
+                        break;
+                    case 25: { Cartes[i] = "Roi de Carreau"; }
+                        break;
+                    default: { Cartes[i] = string.Format("{0} de Carreau", i - 12); }
+                        break;
                 }
             }
 
             for (int i = 26; i < 39; i++)
             {
-                if (i == 26)
+                switch (i)
                 {
-                    Cartes[i] = "As de Piques";
-                }
-                else if (i == 36)
-                {
-                    Cartes[i] = "Valet de Piques";
-                }
-                else if (i == 37)
-                {
-                    Cartes[i] = "Dame de Piques";
-                }
-                else if (i == 38)
-                {
-                    Cartes[i] = "Roi de Piques";
-                }
-                else
-                {
-                    Cartes[i] = string.Format("{0} de Piques", i - 25);
+                    case 26: { Cartes[i] = "As de Piques"; }
+                        break;
+                    case 36: { Cartes[i] = "Valet de Piques"; }
+                        break;
+                    case 37: { Cartes[i] = "Dame de Piques"; }
+                        break;
+                    case 38: { Cartes[i] = "Roi de Piques"; }
+                        break;
+                    default: { Cartes[i] = string.Format("{0} de Piques", i -25); }
+                        break;
                 }
             }
 
             for (int i = 39; i < 52; i++)
             {
-                if (i == 39)
+                switch (i)
                 {
-                    Cartes[i] = "As de Trèfle";
-                }
-                else if (i == 49)
-                {
-                    Cartes[i] = "Valet de Trèfle";
-                }
-                else if (i == 50)
-                {
-                    Cartes[i] = "Dame de Trèfle";
-                }
-                else if (i == 51)
-                {
-                    Cartes[i] = "Roi de Trèfle";
-                }
-                else
-                {
-                    Cartes[i] = string.Format("{0} de Trèfle", i - 38);
+                    case 39: { Cartes[i] = "As de Trèfle"; }
+                        break;
+                    case 49: { Cartes[i] = "Valet de Trèfle"; }
+                        break;
+                    case 50: { Cartes[i] = "Dame de Trèfles"; }
+                        break;
+                    case 51: { Cartes[i] = "Roi de Trèfle"; }
+                        break;
+                    default: { Cartes[i] = string.Format("{0} de Trèfle", i - 38); }
+                        break;
                 }
             }
+
 
             for (int i = 0 ; i < 52 ; i++ )
             {
