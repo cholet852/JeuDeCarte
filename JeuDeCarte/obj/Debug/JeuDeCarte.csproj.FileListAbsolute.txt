@@ -1,0 +1,7 @@
+c:\users\mickael\documents\visual studio 2013\Projects\JeuDeCarte\JeuDeCarte\bin\Debug\JeuDeCarte.exe.config
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\bin\Debug\JeuDeCarte.exe.config
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\bin\Debug\JeuDeCarte.exe
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\bin\Debug\JeuDeCarte.pdb
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\obj\Debug\JeuDeCarte.csprojResolveAssemblyReference.cache
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\obj\Debug\JeuDeCarte.exe
+C:\Users\Mickael\Source\Repos\JeuDeCarte\JeuDeCarte\obj\Debug\JeuDeCarte.pdb
