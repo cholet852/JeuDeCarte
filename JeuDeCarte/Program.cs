@@ -12,82 +12,53 @@ namespace JeuDeCarte
         {
             string[] Cartes = new string[52];
 
-            for (int i = 0; i < 13; i++)
+            string[] typesCartes = new string[4] {"coeur", "carreau","pique","trèfle"};
+
+            int index = 0;
+
+            for (int typesCarte = 0; typesCarte < 4; typesCarte++)
             {
-                switch (i)
+                Cartes[index] = string.Format("As de {0}", typesCartes[typesCarte]);
+                index++;
+
+                for(int i = 2; i<11; i++)
                 {
-                    case 0: { Cartes[i] = "As de Coeur"; }
-                        break;
-                    case 10: { Cartes[i] = "Valet de Coeur"; }
-                        break;
-                    case 11: { Cartes[i] = "Dame de Coeur"; }
-                        break;
-                    case 12: { Cartes[i] = "Roi de Coeur"; }
-                        break;
-                    default: { Cartes[i] = string.Format("{0} de Coeur", i + 1); }
-                        break;
+                    Cartes[index] = string.Format("{0} de {1}", i, typesCartes[typesCarte]);
+                    index++;
+                }
+                Cartes[index] = string.Format("valet de {0}", typesCartes[typesCarte]);
+                index++;
+
+                Cartes[index] = string.Format("dame de {0}", typesCartes[typesCarte]);
+                index++;
+
+                Cartes[index] = string.Format("roi de {0}", typesCartes[typesCarte]);
+                index++;
+            }
+
+            string[] CartesBrassees = new string[52];
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < 52; i++)
+            {
+                bool cartePlacee = false;
+                while(!cartePlacee)
+                {
+                    int j = rnd.Next(0, 52);
+                    if(CartesBrassees[j] == null)
+                    {
+                        CartesBrassees[j] = Cartes[i];
+                        cartePlacee = true;
+                    }
                 }
             }
 
-            for (int i = 13; i < 26; i++)
-            {
-                switch (i)
+                for (int i = 0; i < 52; i++)
                 {
-                    case 13: { Cartes[i] = "As de Carreau"; }
-                        break;
-                    case 23: { Cartes[i] = "Valet de Carreau"; }
-                        break;
-                    case 24: { Cartes[i] = "Dame de Carreau"; }
-                        break;
-                    case 25: { Cartes[i] = "Roi de Carreau"; }
-                        break;
-                    default: { Cartes[i] = string.Format("{0} de Carreau", i - 12); }
-                        break;
+                    Console.WriteLine(CartesBrassees[i]);
+                    Console.ReadLine();
                 }
-            }
-
-            for (int i = 26; i < 39; i++)
-            {
-                switch (i)
-                {
-                    case 26: { Cartes[i] = "As de Piques"; }
-                        break;
-                    case 36: { Cartes[i] = "Valet de Piques"; }
-                        break;
-                    case 37: { Cartes[i] = "Dame de Piques"; }
-                        break;
-                    case 38: { Cartes[i] = "Roi de Piques"; }
-                        break;
-                    default: { Cartes[i] = string.Format("{0} de Piques", i -25); }
-                        break;
-                }
-            }
-
-            for (int i = 39; i < 52; i++)
-            {
-                switch (i)
-                {
-                    case 39: { Cartes[i] = "As de Trèfle"; }
-                        break;
-                    case 49: { Cartes[i] = "Valet de Trèfle"; }
-                        break;
-                    case 50: { Cartes[i] = "Dame de Trèfles"; }
-                        break;
-                    case 51: { Cartes[i] = "Roi de Trèfle"; }
-                        break;
-                    default: { Cartes[i] = string.Format("{0} de Trèfle", i - 38); }
-                        break;
-                }
-            }
-
-
-            for (int i = 0 ; i < 52 ; i++ )
-            {
-                Console.WriteLine(Cartes[i]);
-                Console.ReadLine();
-            }
         }
-    
-    
     }
 }
